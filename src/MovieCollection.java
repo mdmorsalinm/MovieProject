@@ -16,6 +16,10 @@ public class MovieCollection {
     }
 
     private void start() {
+        importData();
+        menu();
+    }
+    private void importData() {
         try {
             File myFile = new File("src\\movies_data.csv");
             Scanner fileScanner = new Scanner(myFile);
@@ -48,6 +52,9 @@ public class MovieCollection {
         } catch (IOException exception) {
             System.out.println(exception.getMessage());
         }
+    }
+
+    private void menu() {
         scan = new Scanner(System.in);
         System.out.println("Welcome to the movie collection!");
         String menuOption = "";
@@ -74,7 +81,6 @@ public class MovieCollection {
                 System.out.println("Invalid choice!");
             }
         }
-
     }
 
     private void searchTitles() {

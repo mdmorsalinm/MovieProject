@@ -11,7 +11,6 @@ public class Movie {
    private String overview;
    private int runtime;
    private double rating;
-   private Scanner scan;
 
    public Movie(String title, String cast, String director, String overview, int runtime, double rating) {
       ArrayList<String> temp = new ArrayList<>();
